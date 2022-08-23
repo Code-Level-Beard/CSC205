@@ -4,7 +4,14 @@ import java.util.Scanner;
 
 public class activity_0 {
 	
-	public static void isSquare(int x)  {
+	public static boolean isSquare(int a) {
+		boolean result = false;
+		if (Math.sqrt(a) % 1 == 0) {
+			result = true;
+		}
+		return result;	}
+	
+	public static void printSquare(int x)  {
 		System.out.print("Squares: ");
 		for (int i = 1; (i * i) < x; i++) {
 			System.out.print(" " + i * i);	}
@@ -21,7 +28,7 @@ public class activity_0 {
 			int diff = limit - (i * i);
 			y = diff / 3;
 			
-			if ((x * x) + (3 * y) < limit) {
+			if ((x * x) + (3 * y) < limit && (y * y ) + (3 * x) < limit) {
 				System.out.println("x=" + x + ", y=" + y );	}
 			}
 		}
@@ -41,7 +48,10 @@ public class activity_0 {
 				}
 		} while (userInput < 1 || userInput > 1000);
 		
-		isSquare(userInput);
+		System.out.println("You entered: " + userInput);
+		System.out.println(isSquare(userInput));
+		
+		printSquare(userInput);
 		System.out.println();
 		find_xy(userInput);
 		System.out.println();
