@@ -1,8 +1,8 @@
-package testBed;
+package activities.activities0;
 
 import java.util.Scanner;
 
-public class tester {
+public class activity_0 {
 	
 	public static void isSquare(int x)  {
 		System.out.print("Squares: ");
@@ -49,4 +49,3 @@ public class tester {
 		scanner.close();
 		}
 }
-
