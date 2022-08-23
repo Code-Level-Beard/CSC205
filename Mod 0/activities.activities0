@@ -1,1 +1,52 @@
+package testBed;
+
+import java.util.Scanner;
+
+public class tester {
+	
+	public static void isSquare(int x)  {
+		System.out.print("Squares: ");
+		for (int i = 1; (i * i) < x; i++) {
+			System.out.print(" " + i * i);	}
+		System.out.println();	}
+	
+	public static void find_xy(int limit) {
+		int x = 0;
+		int y = 0;
+		
+		System.out.println("find_xy: ");
+		
+		for (int i = 1; (i * i) < limit; i++) {
+			x = i;
+			int diff = limit - (i * i);
+			y = diff / 3;
+			
+			if ((x * x) + (3 * y) < limit) {
+				System.out.println("x=" + x + ", y=" + y );	}
+			}
+		}
+
+	public static void main(String[] args) {
+		int userInput;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Please enter a whole number between 1-1000");
+		
+		userInput = scanner.nextInt();
+		
+		do {
+			if (userInput < 0 || userInput > 1000) {
+				System.out.println("Sorry, you entered an invalid number. Please enter a whole number between 1-1000");
+				userInput = scanner.nextInt();
+				}
+		} while (userInput < 1 || userInput > 1000);
+		
+		isSquare(userInput);
+		System.out.println();
+		find_xy(userInput);
+		System.out.println();
+		
+		scanner.close();
+		}
+}
 
