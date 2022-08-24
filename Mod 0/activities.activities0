@@ -52,13 +52,15 @@ public class activity_0 {
 
 		do {
 			if (userInput < 0 || userInput > 1000) {
-				System.out.println("Sorry, you entered an invalid number. Please enter a whole number between 1-1000");
+				System.out.println("Sorry, you entered an invalid number. Please enter a whole number between 1-1000:");
 				userInput = scanner.nextInt();
 			}
 		} while (userInput < 1 || userInput > 1000);
 
 		System.out.println("You entered: " + userInput);
-		System.out.println(isSquare(userInput));
+		System.out.println();
+		printSquare(userInput);
+		System.out.println();
 		find_xy(userInput);
 		System.out.println();
 
