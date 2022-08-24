@@ -9,13 +9,16 @@ public class activity_0 {
 		if (Math.sqrt(a) % 1 == 0) {
 			result = true;
 		}
-		return result;	}
+		return result;
+	}
 
-	public static void printSquare(int x)  {
+	public static void printSquare(int x) {
 		System.out.print("Squares: ");
 		for (int i = 1; (i * i) < x; i++) {
-			System.out.print(" " + i * i);	}
-		System.out.println();	}
+			System.out.print(" " + i * i);
+		}
+		System.out.println();
+	}
 
 	public static void find_xy(int limit) {
 		int a = limit;
@@ -24,15 +27,19 @@ public class activity_0 {
 
 		System.out.println("find_xy: ");
 
-		do {	
+		do {
 			for (int j = 0; j < a; j++) {
-				if ((x * x) + (3 * y) < a && isSquare((x * x) + (3 * y)) == true &&  (y * y ) + (3 * x) < a && isSquare((y * y ) + (3 * x))) {
-					System.out.println("x=" + x + ", y=" + y );		}
+				if ((x * x) + (3 * y) < a && isSquare((x * x) + (3 * y)) == true && (y * y) + (3 * x) < a
+						&& isSquare((y * y) + (3 * x))) {
+					System.out.println("x=" + x + ", y=" + y);
+				}
 				y++;
-			}while (y < a);
-			y =1; 
+			}
+			while (y < a)
+				;
+			y = 1;
 			x++;
-		}while (x < a);
+		} while (x < a);
 	}
 
 	public static void main(String[] args) {
@@ -52,9 +59,6 @@ public class activity_0 {
 
 		System.out.println("You entered: " + userInput);
 		System.out.println(isSquare(userInput));
-
-		printSquare(userInput);
-		System.out.println();
 		find_xy(userInput);
 		System.out.println();
 
