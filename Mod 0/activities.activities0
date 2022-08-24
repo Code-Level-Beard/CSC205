@@ -35,8 +35,7 @@ public class activity_0 {
 				}
 				y++;
 			}
-			while (y < a)
-				;
+			while (y < a);
 			y = 1;
 			x++;
 		} while (x < a);
